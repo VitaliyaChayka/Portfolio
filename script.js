@@ -26,7 +26,7 @@ window.addEventListener('scroll', function(e) {
 
 //////////////scroll sections
 let sectionHight = 0
-for (let link of document.getElementsByClassName('nav_link')){
+for (let link of document.getElementsByClassName('nav__link')){
     link.addEventListener('click', function(e){
         e.preventDefault();
         let id_section = this.getAttribute('href') //#section
@@ -39,7 +39,7 @@ for (let link of document.getElementsByClassName('nav_link')){
     })
 }
 ////////////////////////////
-let navLink = [].slice.call(document.querySelectorAll('.nav_list a'));
+let navLink = [].slice.call(document.querySelectorAll('.nav__list a'));
 navLink.forEach(function(el) {
     el.addEventListener('click', function(e) {
         e.preventDefault();
@@ -54,7 +54,7 @@ navLink.forEach(function(el) {
 /////////////////////////изменение цвета ссылки при скроле в зависимости от секции
 
  function activeScrollLink() {
-       for (let link of document.getElementsByClassName('nav_link')) {
+       for (let link of document.getElementsByClassName('nav__link')) {
           let id_section = link.getAttribute('href');
           window.addEventListener('scroll', function () {
              let pos = document.querySelector(id_section).getBoundingClientRect();
@@ -81,3 +81,20 @@ window.addEventListener('scroll', function(){
 
     }
 })
+
+
+///////////burger///////
+
+let burger = document.querySelector('.header__burger');
+let nav = document.querySelector('.nav');
+let body = document.getElementsByTagName('body');
+
+burger.addEventListener('click', function(){
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+})
+
+nav.addEventListener('click', function(){
+    burger.classList.remove('active');
+    nav.classList.remove('active');
+ })
