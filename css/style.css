@@ -297,10 +297,18 @@ img {
 .portfolio__link {
   text-transform: capitalize;
   text-decoration: none;
-  color: #070707;
+  color: #403f41;
   margin: 10px 2px;
   font-size: calc(18px + 7 * (100vw / 1400));
   font-weight: 600;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio__link:hover {
+  text-shadow: 1px 0px 1px #828282;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .portfolio__images {
@@ -341,7 +349,15 @@ img {
   width: 100%;
   max-height: 440px;
   max-width: 100%;
-  border: 2px solid #ccc;
+  -webkit-box-shadow: 2px 1px 4px #ccc;
+          box-shadow: 2px 1px 4px #ccc;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio-img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .contacts {
@@ -440,10 +456,6 @@ img {
   border-radius: 10px;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.icon-viber {
-  fill: black;
 }
 
 #scrollup {

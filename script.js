@@ -32,7 +32,7 @@ for (let link of document.getElementsByClassName('nav__link')){
         let id_section = this.getAttribute('href') //#section
         let pos = document.querySelector(id_section).getBoundingClientRect();
         window.scrollTo({
-        top: document.querySelector(id_section).offsetTop - 110,
+        top: document.querySelector(id_section).offsetTop - 80,
         left: 0,
         behavior: 'smooth'
     });
